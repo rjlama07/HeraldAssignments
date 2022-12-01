@@ -6,7 +6,8 @@ float midPoint(float a,float b){
 
 }
 
-void main(){
+void main()
+{
     float x1,x2,y1,y2;
     printf("Enter x1:");
     scanf("%f",&x1);
@@ -18,6 +19,4 @@ void main(){
     scanf("%f",&y1);
     printf("Mid point of X:%2f\n",midPoint(x1,x2));
     printf("Mid point of Y:%2f",midPoint(y1,y2));
-
-
 }

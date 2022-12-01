@@ -24,13 +24,15 @@ void checkPerfectNumber(int a)
 
 {
   int sum=0;
-  for(int i=0;i<a;i++)
+  for(int i=1;i<a;i++)
   {
     if(a%i==0)
     {
-      sum=+i;
+        sum+=i;
     }
   }
+  
+
     if(a==sum)
    {
     printf("The number is perfect number\n");
