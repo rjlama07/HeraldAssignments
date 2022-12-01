@@ -1,4 +1,5 @@
-#include<Stdio.h>
+#include<stdio.h>
+
 void  checkArmstrong(int a){
     int sum=0;
     int initaialnum=a;
@@ -19,34 +20,14 @@ void  checkArmstrong(int a){
    }
 }
 
-void checkPerfectNumber(int a){
-int sum=0;
-int i;
-int initaialnum=a;
-printf("%d\n",initaialnum);
-  for( i=0;i<initaialnum;i++)
-  {
-    printf("ja\n");
-    if(initaialnum%i==0)
-    {
-        sum=sum+i;    
-    }
-    
-    
-  }
-  printf("%d",sum);
-   
-  
-  // if(b==sum)
-  //  {
-  //   printf("The number is perfect number");
-  //  }
-  //  else
-  //  {
-  //   printf("The number is not perfect number");
-  //  }
-}
+void checkPerfectNumber(int num)
 
+{
+  for(int i=0;i<num;i++)
+  {
+    printf("Work");
+  }
+}
 
 
 void main(){
@@ -55,6 +36,7 @@ void main(){
      scanf("%d",&a);
      checkArmstrong(a);
      checkPerfectNumber(a);
+     
 
-
+     
 }
