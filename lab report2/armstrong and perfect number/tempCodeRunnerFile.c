@@ -1,0 +1,1 @@
+checkPerfectNumber(a);
