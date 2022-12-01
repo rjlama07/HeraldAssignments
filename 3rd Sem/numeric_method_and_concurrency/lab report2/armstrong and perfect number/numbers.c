@@ -20,13 +20,25 @@ void  checkArmstrong(int a){
    }
 }
 
-void checkPerfectNumber(int num)
+void checkPerfectNumber(int a)
 
 {
-  for(int i=0;i<num;i++)
+  int sum=0;
+  for(int i=0;i<a;i++)
   {
-    printf("Work");
+    if(a%i==0)
+    {
+      sum=+i;
+    }
   }
+    if(a==sum)
+   {
+    printf("The number is perfect number\n");
+   }
+   else
+   {
+    printf("The number is not perfect number\n");
+   }
 }
 
 
