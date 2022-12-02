@@ -17,8 +17,7 @@ void main()
         int sum=0;
         for(int j=0;j<2;j++)
         {
-            sum=sum+a[i][j];
-            
+            sum=sum+a[i][j];  
         }
         printf("Sum %d is %d\n",i+1,sum);
     }
