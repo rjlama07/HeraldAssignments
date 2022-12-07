@@ -2,22 +2,23 @@
 
 void newList(int a[10]){
     int i,j;
-   for( i=0;i<10;i++)
+   for( i=0;i<9;i++)
    {
-    for( j=0;j<10;j++)
+    for( j=i+1;j<i;j++)
     {
         if (a[i]=a[j])
+        printf("%d\n",a[i]);
         break;    
     }
     if(i=j)
-    printf("%d",a[i]);
+    printf("%d\n",a[i]);
    }  
 
 }
 
 void main(){
 
-    int a[10]={1,2,4,3,2,3,5,6,10,12};
+    int a[10]={1,2,4,8,4,2,4,9,6};
     newList(a);
 
 
