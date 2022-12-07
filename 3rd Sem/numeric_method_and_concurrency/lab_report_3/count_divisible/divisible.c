@@ -8,7 +8,7 @@ for(int i=0;i<6;i++)
  if(a[i]%5==0 && a[i]%3!=0 && a[i]%2!=0)
  {
    sum+=a[i];
-   c+=1;;
+   c+=1;
  }
 } 
 printf("Count is %d\n",c);
