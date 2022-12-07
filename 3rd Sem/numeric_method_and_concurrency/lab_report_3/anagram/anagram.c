@@ -1,42 +1,49 @@
 #include<stdio.h>
 #include<string.h>
 
-
-void *sortString(char string[])
+char *sortData(char string[])
 {
-    char temp;
-    int len = strlen(string);
-    printf("%d",len);
-    return string;
-}
-int compareString(char str1[],char str2[]){
-    for(int i=0;i<strlen(str1);i++)
+     for(int i=0;i<strlen(string);i++)
     {
-        if(str1[i]!=str2[i])
+        for(int j=i+1;j<strlen(string);j++)
         {
-            return 0;
+            if(string[i]>string[j])
+            {
+               char temp= string[i];
+               string[i]=string[j];
+               string[j]=temp;
+
+            }
         }
     }
-    return 1;
+    return string;
 
 }
+int compare_string(char first_string[], char second_string[])
+{
+    for (int i = 0; i < strlen(first_string); i++)
+    {
+        if (first_string[i] != second_string[i])
+            return 0;
+    }
+    return 1;
+}
+
 
 void main(){
-    char str1[4]="abcd";
-    char str2[4]="bacd";
+    char str1[6]="stop";
+    char str2[6]="post";
     
-    sortString(str1);
-    // char *first_string=sortString(str1);
-    // char *second_string=sortString(str2);
-    // printf("%s\n",first_string);
-    // printf("%s\n",second_string);
-    // if(compareString(first_string,second_string))
-    // {
-    //     printf("String is anagram");
-    // }
-    // else
-    // {
-    //     printf("String is not anagram");
-    // }
+    char *firstString=sortData(str1);
+    char *secondString=sortData(str2);
+    if(compare_string(firstString,secondString))
+    {
+        printf("It is anagram");
+    }
+    else{
+        printf("It is not anagram");
+    }
+    
 
+    
 }

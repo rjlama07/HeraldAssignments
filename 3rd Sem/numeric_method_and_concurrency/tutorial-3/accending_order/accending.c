@@ -5,7 +5,7 @@
 #include<stdio.h>
 
 void main(){
-    int a[5]={10,5,32,1,3};
+    int a[5]={10,5,32,1,51};
     for(int i=0;i<5;i++)
     {
         for(int j=i+1;j<5;j++)
