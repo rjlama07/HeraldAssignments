@@ -17,7 +17,6 @@ char *sortData(char string[])
         }
     }
     return string;
-
 }
 int compare_string(char first_string[], char second_string[])
 {
@@ -42,8 +41,5 @@ void main(){
     }
     else{
         printf("It is not anagram");
-    }
-    
-
-    
+    }    
 }
