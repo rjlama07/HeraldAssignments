@@ -82,6 +82,7 @@ public class Resturant {
             int a;
             System.out.println("Presss 1 for signin\nPress 2 to quit");
             a = scanner.nextInt();
+            scanner.nextLine();
             if (a == 1) {
                 Signup();
                 continue;
@@ -90,8 +91,6 @@ public class Resturant {
                 break;
             }
         }
-
-        scanner.close();
 
     }
 
