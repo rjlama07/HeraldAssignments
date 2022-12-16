@@ -11,7 +11,6 @@ public class Validate {
         Matcher matcher=pattern.matcher(email);
         return matcher.matches();
     }
-
     static boolean checkPassword(String p){
         String regex="^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$";
         Pattern pattern=Pattern.compile(regex);
