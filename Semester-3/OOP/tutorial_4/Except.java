@@ -2,14 +2,14 @@ import java.util.Scanner;
 
 public class Except {
     public static void main(String[] args) {
-        int a;
-        int b;
+        float a;
+        float b;
         try{
             System.out.println("Enter a number:");
             Scanner sc=new Scanner(System.in);
             a=sc.nextInt();
             System.out.println("Enter 2nd number");
-            b=sc.nextInt();
+            b=sc.nextFloat();
             float c=a/b;
             System.out.println(c);
             sc.close();   
