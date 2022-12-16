@@ -1,4 +1,5 @@
 public class Mobile{
+
     String brand;
     boolean dualSim=false;
     String batteryCapacity;
@@ -10,6 +11,8 @@ public class Mobile{
     this.dualSim=dualSim;
     this.batteryCapacity=batteryCapacity;
    }
+  
+
    void displayDetails(){
     if(brand==null )
     {
