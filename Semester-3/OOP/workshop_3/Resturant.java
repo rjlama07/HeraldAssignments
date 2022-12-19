@@ -1,4 +1,4 @@
-import java.util.NoSuchElementException;
+
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -42,13 +42,13 @@ public class Resturant {
         return matcher.matches();
     }
 
-    public static void Signup() {
-        Scanner sc = new Scanner(System.in);
+    public static void Signup(Scanner sc) {
         String username, password, c_password;
         System.out.println("Enter username");
         username = sc.next();
 
         while (true) {
+            sc.nextLine();
             System.out.println("Enter password");
             password = sc.next();
             if (checkPassword(password)) {
@@ -68,7 +68,6 @@ public class Resturant {
         String dob;
         System.out.println("Enter your date of birth in Dd/Mm/YYYY");
         dob = sc.next();
-        sc.close();
         Signup signup = new Signup();
         signup.setUsername(username);
         signup.setPassword(password);
@@ -79,18 +78,20 @@ public class Resturant {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         while (true) {
+
             int a;
             System.out.println("Presss 1 for signin\nPress 2 to quit");
             a = scanner.nextInt();
-            scanner.nextLine();
             if (a == 1) {
-                Signup();
+                scanner.nextLine();
+                Signup(scanner);
                 continue;
             } else if (a == 2) {
                 System.out.println("Thankyou for using our application");
                 break;
             }
         }
+        scanner.close();
 
     }
 
