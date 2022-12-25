@@ -35,11 +35,11 @@ void main()
     userInput(employess);
     for (int i = 0; i < 3; i++)
     {
-        if (employess[i].hours_of_worked >= 8 && employess[i].salary < 10)
+        if (employess[i].hours_of_worked >= 8 && employess[i].hours_of_worked < 10)
         {
             employess[i].salary += 50;
         }
-        else if (employess[i].hours_of_worked >= 10 && employess[i].salary < 12)
+        else if (employess[i].hours_of_worked >= 10 && employess[i].hours_of_worked < 12)
         {
             employess[i].salary += 100;
         }

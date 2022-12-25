@@ -28,13 +28,13 @@ void displayStudents(struct student students[])
         int num = i + 1;
         printf("\nThe name of student %d:%s", num, students[i].name);
         printf("\nThe roll no of student %d:%d", num, students[i].roll_no);
-        printf("\n Marks of student %ds:%f", num, students[i].marks);
+        printf("\n Marks of student %d:%f", num, students[i].marks);
     }
 }
 
 void main()
 {
-    struct student s1[3];
+    struct student s1[10];
     readStudent(s1);
     printf("\n");
     displayStudents(s1);

@@ -16,7 +16,6 @@ void main()
 {
 
     struct UpperLower ul;
-    int upper, lower;
     printf("Input lower limit:");
     scanf("%d", &ul.lowerLimit);
     printf("\nInput Upper limit:");
