@@ -12,11 +12,11 @@ void main()
         printf("\nUnable to open file.\n");
         printf("Please check if file exists and you have read/write privilege.\n");
     }
-    c = fgetc(emp);
-    while (c != EOF)
+
+    while (!feof(emp))
     {
-        fputc(c, new);
         c = getc(emp);
+        fputc(c, new);
     }
     printf("\nFiles copied successfully.\n");
     fclose(new);
