@@ -14,6 +14,8 @@ void main()
     for (int i = 0; i < width * height; i += 4)
     {
         printf("R=%d,G=%d,B=%d,T=%d\n", image[i], image[i + 1], image[i + 2], image[i + 3]);
+        image[i + 3] = 150;
     }
+    lodepng_encode32_file("tst01.png", image, width, height);
     printf("Okay done");
 }
