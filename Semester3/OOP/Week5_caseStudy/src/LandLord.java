@@ -1,11 +1,8 @@
 import java.util.Scanner;
 
 interface LandlordRights {
-
     void giveNotice();
-
     void reviewTenant();
-
     void requestPayment();
 }
 
@@ -13,26 +10,28 @@ public class LandLord extends SystemUser implements  LandlordRights{
     final String role="Landlord";
     @Override
     public  void giveNotice(){}
-
     @Override
     public  void reviewTenant(){}
-
     @Override
     public  void requestPayment(){}
-
-
-
     @Override
     public  void logout(
-
     ){
         System.out.println("Successfully logout!!!");
     }
+    public void addBill(Scanner sc){
+        sc.nextLine();
+        System.out.println("Enter the name of tenant");
+        String name= sc.nextLine();
+        System.out.println("Enter amount");
+        int amount=sc.nextInt();
+        System.out.println(amount+" Rs has been added to Mr/miss "+ name);
+    }
+
     @Override
     public void login(Scanner scanner){
         System.out.println("\tWelcome");
         System.out.println("Logged in as Landlord");
-
         boolean exit=true;
         while (exit)
         {
@@ -46,10 +45,9 @@ public class LandLord extends SystemUser implements  LandlordRights{
             int choice =scanner.nextInt();
             switch (choice){
                 case 0:
-                    System.out.println("Sucessfully Exited");
+                    System.out.println("Successfully Exited");
                     exit=false;
                     break;
-
                 case 1:
                      try
                      {
@@ -58,16 +56,14 @@ public class LandLord extends SystemUser implements  LandlordRights{
                      catch (Exception e)
                      {
                          System.out.println(e.toString());
-
                      }
                     break;
 
                 case 2:
-                    System.out.println("Add bill");
+                    addBill(scanner);
                     break;
 
                 case 3:
-
                     System.out.println("There are "+(Main.getFamTenantList().size()+Main.getStudentTypeTenant().size())+" Tenant");
                     break;
 

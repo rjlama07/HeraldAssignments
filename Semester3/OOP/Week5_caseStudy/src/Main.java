@@ -140,8 +140,26 @@ public class Main{
                 landLord.login(sc);
                 break;
 
+            case "Tenant":
+                System.out.println("""
+                        choose mode:
+                        1.Family Type Tenant
+                        2.Student Type Tenant
+                        """);
+                int choice=sc.nextInt();
+                if(choice==1)
+                {
+                   FamilyTypeTenant fam=new FamilyTypeTenant();
+                   fam.login(sc);
+
+                }
+                else
+                {
+                    StudentTypeTenant studentTypeTenant=new StudentTypeTenant();
+                    studentTypeTenant.login(sc);
+                }
+
             default:
-                System.out.println("NO function yet");
                 break;
 
 
