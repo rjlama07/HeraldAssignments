@@ -2,6 +2,5 @@
 
 void main()
 {
-
-    printf("");
+    
 }
