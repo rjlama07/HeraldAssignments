@@ -1,16 +1,12 @@
-package auth;
-
 import java.util.List;
 import java.util.Map;
-
-import Login.LoginData;
 
 public class Auth {
     private List<Map<String, String>> userData;
 
     public Auth() {
         LoginData login = new LoginData();
-        this.userData = login.getUserData();
+        this.userData=login.getUserData();
     }
 
     public String getUserRole(String username, String password) {
@@ -21,5 +17,4 @@ public class Auth {
         }
         throw new RuntimeException();
     }
-
 }

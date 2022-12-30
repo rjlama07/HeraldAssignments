@@ -1,6 +1,3 @@
-
-package Login;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -20,13 +17,13 @@ public class LoginData {
         Map<String, String> landlord = new HashMap<String, String>();
         landlord.put("username", "@landlord");
         landlord.put("password", "password@123");
-        landlord.put("role", "Admin");
+        landlord.put("role", "Landlord");
         userData.add(landlord);
 
         Map<String, String> tenant = new HashMap<String, String>();
         tenant.put("username", "@tenant");
         tenant.put("password", "password@123");
-        tenant.put("role", "Admin");
+        tenant.put("role", "Tenant");
         userData.add(tenant);
 
     }
