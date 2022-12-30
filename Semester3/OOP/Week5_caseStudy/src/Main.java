@@ -1,9 +1,75 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.function.Function;
 
 public class Main{
     private static List<LandLord> landlordData = new ArrayList<LandLord>();
+    private static  List<StudentTypeTenant> stdTenantList=new ArrayList<StudentTypeTenant>();
+    private static  List<FamilyTypeTenant> famTenantList=new ArrayList<FamilyTypeTenant>();
+
+    public static List<StudentTypeTenant> getStudentTypeTenant(){
+        return stdTenantList;
+    }
+    public static List<FamilyTypeTenant> getFamTenantList(){
+        return  famTenantList;
+    }
+    public  static void setStdTenantList(List<StudentTypeTenant> list){
+       stdTenantList=list;
+    }
+    public static  void setFamTenantList(List<FamilyTypeTenant> list)
+    {
+        famTenantList=list;
+    }
+    public static void showTenantList(String role)
+    {
+        if (role.equals("Admin")|| role.equals("Landlord"))
+        {
+            if(famTenantList.isEmpty())
+            {
+                System.out.println("There are no family type tenant currently!!!");
+            }
+            else {
+                System.out.println("Family type Tenant");
+                for(int i=0;i<famTenantList.size();i++)
+                {
+                    System.out.println("ID:"+(i+1));
+                    System.out.println("Name:"+famTenantList.get(i).getName());
+                }
+            }
+            System.out.println("\n");
+           if(stdTenantList.isEmpty())
+           {
+               System.out.println("There are no StdTenant available");
+           }
+           else
+           {
+               System.out.println("\tStudent type Tenant\n");
+               for(int i=0;i<stdTenantList.size();i++)
+               {
+                   System.out.println("ID:"+(i+1));
+                   System.out.println("Name:"+stdTenantList.get(i).getName());
+               }
+           }
+
+        }
+        else
+        {
+            throw new AccessForbiddenError("Access denied");
+        }
+    }
+
+
+    public static void addFamilyTypeTenant(FamilyTypeTenant familyTypeTenant){
+        famTenantList.add(familyTypeTenant);
+    }
+    public static void addStudentTypeTenant(StudentTypeTenant studentTypeTenant){
+        stdTenantList.add(studentTypeTenant);
+    }
+
+
+
+
     public static void setLandlordData(List<LandLord> landLordList){
         landlordData=landLordList;
     }

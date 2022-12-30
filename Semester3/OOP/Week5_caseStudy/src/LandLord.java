@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 interface LandlordRights {
+
     void giveNotice();
 
     void reviewTenant();
@@ -9,6 +10,7 @@ interface LandlordRights {
 }
 
 public class LandLord extends SystemUser implements  LandlordRights{
+    final String role="Landlord";
     @Override
     public  void giveNotice(){}
 
@@ -49,7 +51,15 @@ public class LandLord extends SystemUser implements  LandlordRights{
                     break;
 
                 case 1:
-                    System.out.println("Tenent viewed");
+                     try
+                     {
+                         Main.showTenantList(role);
+                     }
+                     catch (Exception e)
+                     {
+                         System.out.println(e.toString());
+
+                     }
                     break;
 
                 case 2:
@@ -57,7 +67,8 @@ public class LandLord extends SystemUser implements  LandlordRights{
                     break;
 
                 case 3:
-                    System.out.println("View Number of Tenant");
+
+                    System.out.println("There are "+(Main.getFamTenantList().size()+Main.getStudentTypeTenant().size())+" Tenant");
                     break;
 
                 case 4:

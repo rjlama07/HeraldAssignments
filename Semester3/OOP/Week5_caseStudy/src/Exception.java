@@ -5,3 +5,9 @@ class UserNotFound extends RuntimeException{
         super(e);
     }
 }
+class  InputMissMatchException extends  RuntimeException{
+    public InputMissMatchException(String e)
+    {
+        super(e);
+    }
+}
