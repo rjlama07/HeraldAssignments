@@ -1,0 +1,15 @@
+Name:ritesh
+Age:15
+Salary:200
+Name:mausam
+Age:65
+Salary:500
+Name:kushal
+Age:14
+Salary:500
+Name:sanjit
+Age:7
+Salary:0
+Name:doctor
+Age:2
+Salary:11

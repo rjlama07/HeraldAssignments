@@ -31,4 +31,5 @@ void main()
     ptr = arr;
     takeInput(ptr, n);
     printf("%d", sumOfArray(arr, n));
+    free(arr);
 }
