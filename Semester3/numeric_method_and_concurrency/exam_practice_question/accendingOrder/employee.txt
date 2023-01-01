@@ -1,0 +1,6 @@
+Name of employee: rites
+Age of employee: 12
+Salary of employee: 0
+Name of employee: mausam
+Age of employee: 12
+Salary of employee: 0
