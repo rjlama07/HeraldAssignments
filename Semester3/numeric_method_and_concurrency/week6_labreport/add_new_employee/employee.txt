@@ -22,3 +22,6 @@ HoursWorked:13112576
 Name:Resh
 Salary:50000
 Hours_Worked:8
+Name:ritesh
+Salary:5000
+Hours_Worked:60

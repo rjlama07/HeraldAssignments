@@ -22,6 +22,9 @@ void main()
 
 // Implementation
 // This code includes the "stdio.h" header file, which contains declarations for input/output functions such as "printf" and "scanf".
+
 // The main function prompts the user for the number of elements they want to add, and stores this value in the "n" variable.
+
 // It then enters a loop that iterates "n" times, prompting the user for a number to add each time and adding it to the "sum" variable.
+
 // After the loop has completed, the code opens the file "sum.txt" in "append" mode and writes the final value of "sum" to the file. It then prints a message indicating that the sum was added successfully and closes the file.
