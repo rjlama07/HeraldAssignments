@@ -2,13 +2,18 @@
 
 void main()
 {
-    printf("haha");
+
     FILE *file;
     char line[200];
+    if (file == NULL)
+    {
+        perror("Error opening file");
+        }
+
     while (!feof(file))
     {
         fgets(line, 200, file);
-        puts(line);
+        printf("%s", line);
     }
     fclose(file);
 }
