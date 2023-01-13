@@ -8,7 +8,6 @@ void main()
     new = fopen("event.txt", "w");
     if (emp == NULL && new == NULL)
     {
-
         printf("\nUnable to open file.\n");
         printf("Please check if file exists and you have read/write privilege.\n");
     }
