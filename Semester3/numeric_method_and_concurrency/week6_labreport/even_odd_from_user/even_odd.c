@@ -23,5 +23,7 @@ void main()
         {
             fprintf(odd, "%d\n", c);
         }
+        fclose(even);
+        fclose(odd);
     }
 }

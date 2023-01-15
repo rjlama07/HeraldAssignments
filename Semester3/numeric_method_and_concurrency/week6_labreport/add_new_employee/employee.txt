@@ -25,3 +25,6 @@ Hours_Worked:8
 Name:ritesh
 Salary:5000
 Hours_Worked:60
+Name:ritesh
+Salary:5000
+Hours_Worked:60
