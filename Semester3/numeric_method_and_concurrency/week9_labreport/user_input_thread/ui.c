@@ -2,11 +2,15 @@
 #include <pthread.h>
 #include <stdlib.h>
 
-int startingVariable;
+int endvalue;
+int startvalue = 1;
 
-void *thread(void *p)
+void *
+thread(void *p)
 {
-    for (int i = 1; i < startingVariable; i++)
+    int i;
+    i = startvalue;
+    for (i; i < endvalue; i++)
     {
         int check = 0;
         for (int j = 2; j < i; j++)
@@ -21,7 +25,8 @@ void *thread(void *p)
             printf("Prime numbers: %d\n", i);
         }
     }
-    startingVariable += startingVariable;
+    startvalue = endvalue;
+    endvalue += endvalue;
 }
 void main()
 {
@@ -34,7 +39,7 @@ void main()
     }
     else
     {
-        startingVariable = 500 / x;
+        endvalue = 500 / x;
         int i;
         pthread_t *t;
         t = (pthread_t *)malloc(x * sizeof(pthread_t));
