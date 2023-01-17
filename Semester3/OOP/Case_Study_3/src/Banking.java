@@ -29,16 +29,7 @@ public class Banking {
     //function to check Account
     Boolean checkAccount(String userName){
         userName=userName.toLowerCase();
-        if(userInfo.containsKey(userName))
-        {
-
-            return  true;
-        }
-        else
-        {
-            return  false;
-        }
-
+        return userInfo.containsKey(userName);
     }
     //function to create account
     void createAccount(String userName,float amount){
@@ -62,13 +53,7 @@ public class Banking {
 
     //validate amount
     Boolean amountValidator(float amount){
-        if(amount<0)
-        {
-            return false;
-        }
-        else {
-            return true;
-        }
+        return (!amount<0);
     }
 
 
